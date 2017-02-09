@@ -1,4 +1,4 @@
-//  Copyright (C) 2009-2016, Vaclav Haisman. All rights reserved.
+//  Copyright (C) 2009-2017, Vaclav Haisman. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modifica-
 //  tion, are permitted provided that the following conditions are met:
@@ -100,6 +100,7 @@ AsyncAppender::AsyncAppender (SharedAppenderPtr const & app,
 
 
 AsyncAppender::AsyncAppender (helpers::Properties const & props)
+    : Appender (props)
 {
     tstring const & appender_name (
         props.getProperty (LOG4CPLUS_TEXT ("Appender")));
